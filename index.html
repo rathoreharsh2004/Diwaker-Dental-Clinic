@@ -8,7 +8,7 @@
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="Diwaker Dental Clinic provides advanced dental care, root canal treatment, teeth cleaning, implants, cosmetic dentistry and painless dental treatments in Nagaur.">
-<meta name="keywords" content="Dental Clinic Nagaur, Dentist Nagaur, Root Canal, Teeth Cleaning, Dental Implant, Dr Chiangi Lal">
+<meta name="keywords" content="Dental Clinic Nagaur, Dentist Nagaur, Root Canal, Teeth Cleaning, Dental Implant, Dr Diwaker, Dr Ram">
 <meta name="author" content="Diwaker Dental Clinic">
 
 <!-- Favicon -->
@@ -886,7 +886,7 @@ nav a.active:after {
 }
 
 /* =========================================================
-   DOCTOR SECTION
+   DOCTORS SECTION - TWO DOCTORS
 ========================================================= */
 .doctor {
   background: #ffffff;
@@ -895,125 +895,127 @@ nav a.active:after {
 
 .doctor-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 70px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: stretch;
 }
 
-.doctor-visual {
-  position: relative;
+.doctor-profile {
+  background: #ffffff;
+  border: 1px solid #dceaf7;
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
 }
 
-.doctor-frame {
-  background: linear-gradient(145deg, #dff7fb, #eaf4ff);
-  border-radius: 34px;
-  padding: 20px;
+.doctor-profile:hover {
+  transform: translateY(-8px);
   box-shadow: var(--shadow2);
-  transform: rotate(-1.5deg);
-  transition: transform 0.5s ease;
-}
-
-.doctor-frame:hover {
-  transform: rotate(0deg) translateY(-5px);
+  border-color: #b9dcf7;
 }
 
 .doctor-card-art {
-  border-radius: 26px;
+  border-radius: 22px;
   overflow: hidden;
-  background: #ffffff;
+  background: linear-gradient(145deg, #dff7fb, #eaf4ff);
 }
 
 .doctor-card-art img {
   width: 100%;
-  height: 520px;
+  height: 430px;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center top;
   display: block;
+  transition: transform 0.6s ease;
 }
 
-.doctor-note {
-  position: absolute;
-  right: -20px;
-  bottom: 25px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  padding: 16px 22px;
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border: 1px solid rgba(11, 94, 215, 0.12);
-  animation: cardFloat 5s ease-in-out infinite;
+.doctor-profile:hover .doctor-card-art img {
+  transform: scale(1.03);
 }
 
-.doctor-note .icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 13px;
-  background: var(--pale);
-  color: var(--blue);
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-}
-
-.doctor-note strong {
-  display: block;
-  font-size: 15px;
-  color: var(--ink);
-}
-
-.doctor-note span {
-  font-size: 12.5px;
-  color: var(--muted);
+.doctor-copy {
+  padding: 24px 8px 8px;
 }
 
 .doctor-copy h2 {
-  font-size: clamp(34px, 4vw, 48px);
+  font-size: clamp(28px, 3vw, 38px);
   font-weight: 800;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.8px;
   line-height: 1.15;
-  margin: 18px 0 6px;
+  margin: 14px 0 5px;
   color: var(--ink);
 }
 
 .doctor-copy h4 {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--blue);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .doctor-copy p {
   color: var(--muted);
-  font-size: 15.5px;
-  line-height: 1.85;
-  margin-bottom: 26px;
+  font-size: 14.5px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.doctor-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  background: var(--pale);
+  border: 1px solid #dceaf7;
+  padding: 10px 14px;
+  border-radius: 14px;
+}
+
+.doctor-note .icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: #ffffff;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+}
+
+.doctor-note strong {
+  display: block;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.doctor-note span {
+  font-size: 11.5px;
+  color: var(--muted);
 }
 
 .specialties-title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--ink);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .point-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 32px;
+  gap: 10px;
+  margin-bottom: 22px;
 }
 
 .point {
   background: var(--pale);
   border: 1px solid #dceaf7;
-  border-radius: 14px;
-  padding: 13px 16px;
+  border-radius: 13px;
+  padding: 11px 13px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   color: #37536e;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -1026,7 +1028,149 @@ nav a.active:after {
 
 .point i {
   color: var(--blue);
-  margin-right: 8px;
+  margin-right: 7px;
+}
+
+/* =========================================================
+   TEETH BEFORE / AFTER SECTION
+========================================================= */
+.before-after {
+  background: linear-gradient(180deg, var(--pale), #ffffff);
+  padding: 100px 0;
+}
+
+.ba-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ba-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.ba-page {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  min-width: 100%;
+}
+
+.ba-card {
+  background: #ffffff;
+  border: 1px solid #dceaf7;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 38px rgba(8, 66, 152, 0.07);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.ba-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 55px rgba(8, 66, 152, 0.12);
+  border-color: #b9dcf7;
+}
+
+.ba-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ba-card:hover img {
+  transform: scale(1.035);
+}
+
+.ba-label {
+  padding: 15px 18px;
+  text-align: center;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 14px;
+  border-top: 1px solid #edf3f8;
+}
+
+.ba-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.ba-arrow {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(11, 94, 215, 0.25);
+  transition: transform 0.25s ease, background 0.25s ease, opacity 0.25s ease;
+}
+
+.ba-arrow:hover:not(:disabled) {
+  background: var(--navy);
+  transform: translateY(-3px);
+}
+
+.ba-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.ba-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ba-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #b9cfe2;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.ba-dot.active {
+  background: var(--blue);
+  transform: scale(1.35);
+}
+
+@media (max-width: 860px) {
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ba-card img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ba-page {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-card img {
+    height: 300px;
+  }
 }
 
 /* =========================================================
@@ -1907,11 +2051,15 @@ footer {
 @media (max-width: 1100px) {
   .hero-grid,
   .about-grid,
-  .doctor-grid,
   .appointment-wrap,
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .doctor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .service-grid {
@@ -1938,12 +2086,6 @@ footer {
 
   .hero-art {
     min-height: 440px;
-  }
-
-  .doctor-frame {
-    transform: none;
-    max-width: 500px;
-    margin: auto;
   }
 
   .about-frame {
@@ -2130,7 +2272,8 @@ footer {
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#doctor">Doctor</a></li>
+        <li><a href="#doctor">Doctors</a></li>
+        <li><a href="#before-after">Before & After</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -2181,7 +2324,7 @@ footer {
       </h1>
 
       <p class="lead">
-        "Experience advanced dental treatments, painless procedures, modern equipment and compassionate care from Dr. Chiangi Lal in Nagaur."
+        "Experience advanced dental treatments, painless procedures, modern equipment and compassionate care from Dr. Diwaker in Nagaur."
       </p>
 
       <div class="hero-actions">
@@ -2362,56 +2505,90 @@ footer {
 </section>
 
 <!-- =======================================================
-     DOCTOR SECTION (ONLY SECTION WITH DOCTOR IMAGE)
+     DOCTORS SECTION (DR. DIWAKER + DR. RAM)
 ======================================================== -->
 <section class="doctor" id="doctor">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Meet Our Dentist</span>
-      <h2>Dedicated Care & Clinical Precision</h2>
-      <p>Providing high-quality dental treatments with modern technology and a gentle approach.</p>
+      <span class="eyebrow">Meet Our Doctors</span>
+      <h2>Experienced Dental Care Team</h2>
+      <p>Meet our dental professionals dedicated to comfortable, modern and patient-focused dental care.</p>
     </div>
 
     <div class="doctor-grid">
-      <div class="doctor-visual reveal left">
-        <div class="doctor-frame">
-          <div class="doctor-card-art">
-            <img src="doctor.jpg" alt="Dr. Chiangi Lal - Dental Surgeon">
+
+      <article class="doctor-profile reveal left">
+        <div class="doctor-card-art">
+          <img src="dr1.jpeg" alt="Dr. Diwaker - Dental Doctor" loading="lazy">
+        </div>
+
+        <div class="doctor-copy">
+          <span class="eyebrow">Dental Doctor</span>
+          <h2>Dr. Diwaker</h2>
+          <h4>Dental Doctor</h4>
+          <p>
+            Dr. Diwaker focuses on modern dental care with an emphasis on patient comfort, precise treatment and long-term oral health.
+          </p>
+
+          <h3 class="specialties-title">Treatment Specialties</h3>
+          <div class="point-grid">
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Root Canal Treatment</div>
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Dental Implants</div>
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Teeth Cleaning</div>
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Smile Designing</div>
           </div>
+
+          <a href="#appointment" class="btn btn-primary magnetic" data-magnetic>
+            <i class="fa-regular fa-calendar-check"></i>
+            Consult Dr. Diwaker
+          </a>
+
           <div class="doctor-note">
             <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
             <div>
-              <strong>Dr. Chiangi Lal</strong>
-              <span>Dental Surgeon</span>
+              <strong>Dr. Diwaker</strong>
+              <span>Dental Doctor</span>
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="doctor-copy reveal right">
-        <span class="eyebrow">Dental Surgeon</span>
-        <h2>Dr. Chiangi Lal</h2>
-        <h4>Dental Surgeon</h4>
-        <p>
-          "Dr. Chiangi Lal is committed to providing high-quality dental treatments using advanced technology and modern techniques. With years of experience, he focuses on painless procedures, patient comfort and long-lasting oral health."
-        </p>
-
-        <h3 class="specialties-title">Treatment Specialties</h3>
-        <div class="point-grid">
-          <div class="point"><i class="fa-solid fa-circle-check"></i> Root Canal Treatment</div>
-          <div class="point"><i class="fa-solid fa-circle-check"></i> Dental Implants</div>
-          <div class="point"><i class="fa-solid fa-circle-check"></i> Teeth Cleaning</div>
-          <div class="point"><i class="fa-solid fa-circle-check"></i> Smile Designing</div>
-          <div class="point"><i class="fa-solid fa-circle-check"></i> Cosmetic Dentistry</div>
+      <article class="doctor-profile reveal right">
+        <div class="doctor-card-art">
+          <img src="dr2.jpeg" alt="Dr. Ram - Dental Doctor" loading="lazy">
         </div>
 
-        <div>
+        <div class="doctor-copy">
+          <span class="eyebrow">Dental Doctor</span>
+          <h2>Dr. Ram</h2>
+          <h4>Dental Doctor</h4>
+          <p>
+            Dr. Ram is dedicated to delivering patient-friendly dental treatment using modern techniques and a gentle approach to oral care.
+          </p>
+
+          <h3 class="specialties-title">Treatment Specialties</h3>
+          <div class="point-grid">
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Root Canal Treatment</div>
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Dental Implants</div>
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Teeth Cleaning</div>
+            <div class="point"><i class="fa-solid fa-circle-check"></i> Cosmetic Dentistry</div>
+          </div>
+
           <a href="#appointment" class="btn btn-primary magnetic" data-magnetic>
             <i class="fa-regular fa-calendar-check"></i>
-            Consult Dr. Chiangi Lal
+            Consult Dr. Ram
           </a>
+
+          <div class="doctor-note">
+            <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <div>
+              <strong>Dr. Ram</strong>
+              <span>Dental Doctor</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -2475,6 +2652,74 @@ footer {
         <h3>Gum Treatment</h3>
         <p>Healthy gums are the foundation of healthy teeth.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- =======================================================
+     TEETH BEFORE & AFTER SECTION (6 CARDS / 3 AT A TIME)
+======================================================== -->
+<section class="before-after" id="before-after">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Smile Transformations</span>
+      <h2>Teeth Before & After</h2>
+      <p>Explore selected smile transformation results through our before-and-after treatment gallery.</p>
+    </div>
+
+    <div class="ba-slider reveal">
+      <div class="ba-track" id="baTrack">
+
+        <div class="ba-page">
+          <article class="ba-card">
+            <img src="a1.png" alt="Teeth Before and After Treatment 1" loading="lazy">
+            <div class="ba-label">Smile Transformation 01</div>
+          </article>
+
+          <article class="ba-card">
+            <img src="a2.png" alt="Teeth Before and After Treatment 2" loading="lazy">
+            <div class="ba-label">Smile Transformation 02</div>
+          </article>
+
+          <article class="ba-card">
+            <img src="a3.png" alt="Teeth Before and After Treatment 3" loading="lazy">
+            <div class="ba-label">Smile Transformation 03</div>
+          </article>
+        </div>
+
+        <div class="ba-page">
+          <article class="ba-card">
+            <img src="a4.png" alt="Teeth Before and After Treatment 4" loading="lazy">
+            <div class="ba-label">Smile Transformation 04</div>
+          </article>
+
+          <article class="ba-card">
+            <img src="a5.png" alt="Teeth Before and After Treatment 5" loading="lazy">
+            <div class="ba-label">Smile Transformation 05</div>
+          </article>
+
+          <article class="ba-card">
+            <img src="a6.png" alt="Teeth Before and After Treatment 6" loading="lazy">
+            <div class="ba-label">Smile Transformation 06</div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="ba-controls" aria-label="Before and after slider controls">
+      <button class="ba-arrow" id="baPrev" type="button" aria-label="Previous before and after photos">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <div class="ba-dots" id="baDots">
+        <button class="ba-dot active" type="button" aria-label="Show first set"></button>
+        <button class="ba-dot" type="button" aria-label="Show second set"></button>
+      </div>
+
+      <button class="ba-arrow" id="baNext" type="button" aria-label="Next before and after photos">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
     </div>
   </div>
 </section>
@@ -2731,7 +2976,7 @@ footer {
         <div class="quote">“</div>
         <div class="stars">★★★★★</div>
         <p>
-          "Clean clinic with modern equipment. The staff is friendly and Dr. Chiangi Lal explained every step clearly."
+          "Clean clinic with modern equipment. The staff is friendly and Dr. Diwakerexplained every step clearly."
         </p>
         <div class="reviewer">
           <div class="reviewer-avatar">PV</div>
@@ -3155,6 +3400,50 @@ footer {
     if (e.key === "ArrowLeft") openLightbox(currentGalleryIndex - 1);
     if (e.key === "ArrowRight") openLightbox(currentGalleryIndex + 1);
   });
+
+  /* Teeth Before & After Manual Slider */
+  const baTrack = $("#baTrack");
+  const baPrev = $("#baPrev");
+  const baNext = $("#baNext");
+  const baDots = $$(".ba-dot");
+  let baIndex = 0;
+
+  const updateBeforeAfterSlider = () => {
+    if (!baTrack) return;
+
+    baTrack.style.transform = `translateX(-${baIndex * 100}%)`;
+
+    baDots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === baIndex);
+      dot.setAttribute("aria-current", index === baIndex ? "true" : "false");
+    });
+
+    if (baPrev) baPrev.disabled = baIndex === 0;
+    if (baNext) baNext.disabled = baIndex === baDots.length - 1;
+  };
+
+  baPrev?.addEventListener("click", () => {
+    if (baIndex > 0) {
+      baIndex--;
+      updateBeforeAfterSlider();
+    }
+  });
+
+  baNext?.addEventListener("click", () => {
+    if (baIndex < baDots.length - 1) {
+      baIndex++;
+      updateBeforeAfterSlider();
+    }
+  });
+
+  baDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      baIndex = index;
+      updateBeforeAfterSlider();
+    });
+  });
+
+  updateBeforeAfterSlider();
 
   /* Appointment Form -> WhatsApp Submission */
   const appointmentForm = $("#appointmentForm");
